@@ -42,11 +42,12 @@ void init_debug(char* filename)
 #ifdef DEBUG
     glb_debug_running = 1;
 #else
-	if(filename)
-		logging_file = filename;
-	else logging_file = default_log_name;
+	// if(filename)
+	// 	logging_file = filename;
+	// else logging_file = default_log_name;
 
-	fp_debug = fopen(logging_file, "w+b");
+	// fp_debug = fopen(logging_file, "w+b");
+	fp_debug = fopen("log.txt", "w+b");
     if(fp_debug)
         glb_debug_running = 1;
 #endif
